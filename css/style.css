@@ -78,8 +78,8 @@ body {
     flex: 1;
     flex-direction: column;
     padding: 2vw;
-    background-image: url(/img/coryehrenberg.png);
-    background-size: cover;
+    background-image: url(/img/coryehrenberg-fade.png);
+    background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
 }
