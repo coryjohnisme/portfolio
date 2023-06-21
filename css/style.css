@@ -346,6 +346,7 @@ p {
   }
   .welcome {
     flex: 0;
+    background-position: center right;
   }
   .home-container {
     flex-direction: column-reverse;
