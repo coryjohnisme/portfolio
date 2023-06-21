@@ -78,7 +78,7 @@ body {
     flex: 1;
     flex-direction: column;
     padding: 2vw;
-    background-image: url(/img/coryehrenberg.png);
+    background-image: url('/img/coryehrenberg.png');
 }
 
 .contact {
