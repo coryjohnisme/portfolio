@@ -83,6 +83,24 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
 }
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.socials img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.socials img:hover {
+    opacity: 1;
+}
 
 .contact {
     padding-left: 2vw;
@@ -380,6 +398,12 @@ p {
     width: 92vw;
     margin-top: 2vw;
     overflow-y: visible;
+  }
+  .socials {
+    justify-content: flex-start;
+  }
+  .socials img {
+    margin-left: 20px;
   }
 }
 
