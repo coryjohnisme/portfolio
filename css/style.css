@@ -401,6 +401,7 @@ p {
   }
   .socials {
     justify-content: flex-start;
+    padding-left: 2vw;
   }
   .socials img {
     margin-left: 0;
