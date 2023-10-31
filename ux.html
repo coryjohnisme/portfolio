@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Cory Ehrenberg | UX</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        p {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        .portfolio {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            overflow-y: scroll;
+            max-height: calc(100vh - 4vw);
+            padding: 2vw;
+        }
+
+        .project {
+            background-color: var(--project-color, #eeeeee);
+            height: 18.222vw;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+        .project:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-info {
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-category {
+            font-size: 16px;
+        }
+
+        .single {
+            flex: calc(33.333% - (4vw / 1.5));
+        }
+
+        .double {
+            flex: calc(66.664% - 2vw);
+        }
+
+        .triple {
+            flex: 100%;
+        }
+
+        .project-icon {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        .statement {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: calc(100% - 4vw);
+            padding: 2vw;
+            padding-right: 4vw;
+            background-image: url(/img/coryehrenberg-fade.png);
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Calistoga', serif;
+            font-size: 55px;
+            line-height: 1em;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: left;
+        }
+
+        .contact p {
+            margin: 0;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .social img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .social img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="portfolio">
+            <div class="project single">Project 1</div>
+            <div class="project double" style="--project-color: #0040C1">
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <div class="project-title">Acute+</div>
+                        <div class="project-category">UX & Identity</div>
+                    </div>
+                </div>
+                <img src="icons/acuteplus-icon.svg" alt="AcutePlus Logo Icon" class="project-icon">
+            </div>
+            <div class="project double">Project 3</div>
+            <div class="project single">Project 4</div>
+            <div class="project single">Project 5</div>
+            <div class="project single">Project 6</div>
+            <div class="project single">Project 7</div>
+            <div class="project single">Project 8</div>
+            <div class="project double">Project 9</div>
+            <div class="project triple">Project 10</div>
+        </div>
+        <div class="statement">
+            <ul class="nav">
+                <li><a href="#">ux</a></li>
+                <li><a href="#">design</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+            <h1>Hand-crafted designs by me, Cory.</h1>
+            <div class="contact">
+                <p>cory ehrenberg</p>
+                <p><a href="mailto:coryjehrenberg@gmail.com">coryjehrenberg@gmail.com</a></p>
+                <div class="social">
+                    <a href="https://dribbble.com/thecoryjohn"><img src="img/dribbble.svg" alt="Dribbble"></a>
+                    <a href="https://instagram.com/coryjohnisme"><img src="img/instagram.svg" alt="Instagram"></a>
+            <!-- 		<a href="https://www.linkedin.com/in/cory-ehrenberg-00196062/"><img src="img/linkedin.svg" alt="LinkedIn"></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
