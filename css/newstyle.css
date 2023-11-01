@@ -1,0 +1,273 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Global styles */
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2{
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+/* Portfolio styles */
+.portfolio {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    overflow-y: scroll;
+    max-height: calc(100vh - 4vw);
+    padding: 2vw;
+}
+
+.project {
+    background-color: var(--project-color, #eeeeee);
+    height: 18.222vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.single {
+    flex: calc(33.333% - (4vw / 1.5));
+}
+
+.double {
+    flex: calc(66.664% - 2vw);
+}
+
+.triple {
+    flex: 100%;
+}
+
+.project-icon {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* Statement (Navigation Bar) styles */
+.statement {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: calc(100% - 4vw);
+    padding: 2vw;
+    padding-right: 4vw;
+    background-image: url(/img/coryehrenberg-fade.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2vw;
+    padding-right: 4vw;
+    justify-content: space-between;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav li {
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Calistoga', serif;
+    font-size: 55px;
+    line-height: 1em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+    padding-left: 2vw;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.social img:hover {
+    opacity: 1;
+}
+
+/* Case Study Page styles */
+.case {
+    flex: 2;
+    padding: 2vw;
+    overflow-y: scroll;
+    max-height: calc(100vh - 4vw);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2vw;
+    align-content: flex-start;
+    box-shadow: 12.5px 0px 12.5px rgba(0, 0, 0, 0.2);
+}
+
+.case h1 {
+    margin: 0;
+    font-family: 'Calistoga', serif;
+    font-size: 55px;
+    line-height: 1em;
+    flex: 1;
+}
+
+.case h3 {
+    font-size: 16px;
+}
+
+
+
+.details {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vw;
+    align-self: flex-end;
+}
+
+.detail-box h3{
+    font-size: 14px;
+}
+.detail-box p{
+    font-size: 14px;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.overview-triple{
+    flex: 3;
+}
+
+.section{
+    border-top: 2px solid #eeeeee;
+    padding-top: 2vw;
+    gap: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+.section  h2 {
+    flex-basis: 100%; /* Take up 100% of .section width */
+}
+
+.half {
+    flex-basis: calc(50% - (2vw / 2)); /* Take up half of .section width (subtracting some margin for spacing) */
+}
+
+img.half {
+    width: calc(50% - (2vw / 2)); /* Make the image take up 100% of its parent (.half) width */
+    height: auto; /* Maintain aspect ratio of the image */
+}
+
+.full{
+    flex-basis: 100%; /* Take up 100% of .section width */
+    display: flex;
+    justify-content: center;
+
+}
+
+a.btn {
+    height: 60px;
+    padding: 0 2vw;
+    border-radius: 30px; /* Half of the button's height for full rounded corners */
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 60px; /* Center the text vertically */
+    display: inline-block; /* Display the button as an inline-block element */
+    transition: transform 0.3s, box-shadow 0.3s;
+
+  }
+
+a.btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
