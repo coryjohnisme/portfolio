@@ -44,7 +44,7 @@ h2{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* Portfolio styles */
@@ -66,6 +66,7 @@ h2{
     align-items: center;
     justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 250px;
 }
 
 .project:hover {
@@ -97,10 +98,10 @@ h2{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    height: calc(100% - 4vw);
+    height: auto;
     padding: 2vw;
     padding-right: 4vw;
-    background-image: url(/img/coryehrenberg-fade.png);
+    /* background-image: url(/img/coryehrenberg-fade.png); */
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -132,11 +133,24 @@ h2{
     margin-bottom: 10px;
 }
 
+.statement-block{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 2vw;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
 h1 {
     margin: 0;
     font-family: 'Calistoga', serif;
     font-size: 55px;
     line-height: 1em;
+}
+.statement h1{
+    flex-grow: 1;
 }
 
 .contact {
@@ -144,7 +158,6 @@ h1 {
     flex-direction: column;
     align-items: flex-end;
     text-align: left;
-    padding-left: 2vw;
 }
 
 .contact p {
@@ -155,13 +168,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 10px;
+    gap: 2vw;
+    margin-top: 2vw;
 }
 
 .social img {
     width: 20px;
     height: 20px;
-    margin-left: 10px;
     opacity: 0.6;
     transition: opacity 0.3s ease;
 }
@@ -271,3 +284,81 @@ a.btn:hover {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
+
+@media screen and (max-width: 1300px) {
+   .statement{}
+  }
+
+  @media screen and (max-width: 900px) {
+    .statement{
+        flex: 0;
+
+    }
+    .statement h1{
+        font-size: 40px;
+        /* display: none; */
+    }
+    .contact{
+        /* display: none; */
+    }
+
+    .single {
+        flex: calc(50% - 2vw);
+    }
+    
+    .double {
+        flex: calc(50% - 2vw);
+    }
+    
+    .triple {
+        flex: calc(50% - 2vw);
+    }
+    .project {
+        min-height: 0;
+        height: 33vw;
+        max-height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .statement{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    .statement h1{
+        font-size: 30px;
+        display: none;
+    }
+    .statement-block{
+        width: 50%;
+        text-align: left;
+        opacity: 0.25;
+    }
+    .nav{
+        width: 50%;
+    }
+    .contact{
+        align-items:flex-start;
+    }
+    .social{
+        align-items:flex-start;
+        justify-content: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .single {
+        flex: 100%;
+    }
+    
+    .double {
+        flex: 100%;
+    }
+    
+    .triple {
+        flex: 100%;
+    }
+  }
