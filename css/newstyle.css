@@ -52,15 +52,15 @@ h2{
     flex: 2;
     display: flex;
     flex-wrap: wrap;
-    gap: 4vw;
+    gap: 2vw;
     overflow-y: scroll;
     max-height: calc(100vh - 4vw);
-    padding: 4vw;
+    padding: 2vw;
 }
 
 .project {
     background-color: var(--project-color, #cecece);
-    height: 18.224vw;
+    height: 18.222vw;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -75,11 +75,11 @@ h2{
 }
 
 .single {
-    flex: calc(33.333% - (4vw / 1.5));
+    flex: calc(33.333% - (2vw / 1.5));
 }
 
 .double {
-    flex: calc(66.664% - 4vw);
+    flex: calc(66.664% - 2vw);
 }
 
 .triple {
@@ -195,7 +195,7 @@ h1 {
     column-gap: 4vw;
     row-gap: 2vw;
     align-content: flex-start;
-    border-right: 1px solid #cecece;}
+}
 
 .case h1 {
     margin: 0;
@@ -423,7 +423,6 @@ a.btn:hover {
     .nav-bar{
         flex-direction: row-reverse;
         align-items: flex-start;
-        border-bottom: 1px solid #cecece;
     }
     .statement h1{
         font-size: 16px;
@@ -448,6 +447,25 @@ a.btn:hover {
     .social img{
         opacity: 0.25;
     }
+    .nav-bar {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+      }
+
+      .content-container {
+        flex: 2;
+        padding: 4vw;
+        overflow-y: scroll; /* Apply scroll to the container */
+        max-height: calc(100vh - 4vw);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        column-gap: 4vw;
+        row-gap: 2vw;
+        align-content: flex-start;
+    }
+
   }
 
   @media screen and (max-width: 500px) {
