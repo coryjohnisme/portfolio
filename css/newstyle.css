@@ -99,8 +99,8 @@ h2{
     justify-content: space-between;
     align-items: flex-end;
     height: auto;
-    padding: 4vw;
-    padding-right: 4vw;
+    padding: 2vw;
+    padding-right: 2vw;
     /* background-image: url(/img/coryehrenberg-fade.png); */
     background-size: contain;
     background-position: bottom;
@@ -111,8 +111,8 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 4vw;
-    padding-right: 4vw;
+    padding: 2vw;
+    padding-right: 2vw;
     justify-content: space-between;
 }
 
@@ -184,7 +184,18 @@ h1 {
 
 /* Case Study Page styles */
 .case {
-    flex: 2;
+    flex: 2 1 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2vw;
+    overflow-y: scroll;
+    max-height: calc(100vh - 4vw);
+    padding: 2vw;
+    align-content: flex-start;
+
+    /* flex: 2;
     padding: 4vw;
     overflow-y: scroll;
     max-height: calc(100vh - 4vw);
@@ -194,7 +205,7 @@ h1 {
     align-items: flex-start;
     column-gap: 4vw;
     row-gap: 2vw;
-    align-content: flex-start;
+    align-content: flex-start; */
 }
 
 .case h1 {
@@ -244,8 +255,8 @@ h1 {
 
 .section{
     border-top: 1px solid #cecece;
-    padding-top: 4vw;
-    gap: 4vw;
+    padding-top: 2vw;
+    gap: 2vw;
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
