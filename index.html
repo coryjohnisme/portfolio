@@ -54,9 +54,10 @@
         </div>
         <div class="nav-bar">
             <ul class="nav">
-                <li><a href="#" id="ux-link">ux</a></li>
-                <li><a href="#" id="design-link">design</a></li>
+                <li><a href="index.html?show=ux" id="ux-link">ux</a></li>
+                <li><a href="index.html?show=design" id="design-link">design</a></li>
                 <li><a href="/about/">about</a></li>
+                
             </ul>
             <h1>Hand-crafted designs by me, Cory.</h1>
             <div class="statement-block">
@@ -73,12 +74,6 @@
         </div>
     </div>
     <script>
-        // Get references to the UX and Design links and the project groups
-        const uxLink = document.getElementById('ux-link');
-        const designLink = document.getElementById('design-link');
-        const uxProjects = document.querySelectorAll('.ux-projects');
-        const designProjects = document.querySelectorAll('.design-projects');
-        
         // Function to set opacity based on the active state
         function setOpacityBasedOnState() {
             if (isUXActive) {
@@ -93,62 +88,78 @@
                 designProjects.forEach(project => project.style.opacity = '1');
             }
         }
-        
+    
         // Function to get the value of the 'show' query parameter from the URL
         function getQueryParamValue(parameterName) {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             return urlParams.get(parameterName);
         }
-        
-        // Check the 'show' query parameter and set the active state accordingly
+    
+        // Check if the 'show' query parameter is present
         const showParam = getQueryParamValue('show');
+        let isUXActive = false;
+        let isDesignActive = false;
         if (showParam === 'ux') {
             isUXActive = true;
-            isDesignActive = false;
         } else if (showParam === 'design') {
-            isUXActive = false;
             isDesignActive = true;
         }
-        
+    
         // Function to toggle the active state for UX projects
         function toggleUXState(event) {
             event.preventDefault(); // Prevent the default link behavior
             if (isUXActive) {
                 isUXActive = false;
+                updateURL('show', 'design');
             } else {
                 isUXActive = true;
-                isDesignActive = false; // Turn off Design when UX is active
+                isDesignActive = false;
+                updateURL('show', 'ux');
             }
             setOpacityBasedOnState();
         }
-        
+    
         // Function to toggle the active state for Design projects
         function toggleDesignState(event) {
             event.preventDefault(); // Prevent the default link behavior
             if (isDesignActive) {
                 isDesignActive = false;
+                updateURL('show', 'ux');
             } else {
                 isDesignActive = true;
-                isUXActive = false; // Turn off UX when Design is active
+                isUXActive = false;
+                updateURL('show', 'design');
             }
             setOpacityBasedOnState();
         }
-        
+    
         // Add click event listeners to the UX and Design links
+        const uxLink = document.getElementById('ux-link');
+        const designLink = document.getElementById('design-link');
+    
         uxLink.addEventListener('click', toggleUXState);
         designLink.addEventListener('click', toggleDesignState);
-        
+    
+        // Function to update the URL with a new query parameter value
+        function updateURL(key, value) {
+            const url = new URL(window.location.href);
+            url.searchParams.set(key, value);
+            window.history.pushState({}, '', url);
+        }
+    
+        // Get references to the project groups
+        const uxProjects = document.querySelectorAll('.ux-projects');
+        const designProjects = document.querySelectorAll('.design-projects');
+    
         // Call the function to set opacity based on the initial state when the page loads
         setOpacityBasedOnState();
-        </script>
-        
+    </script>
+    
+    
+    
+    
 
-    
-    
-    
-    
-    
     
 </body>
 </html>
