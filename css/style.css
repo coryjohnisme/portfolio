@@ -450,6 +450,19 @@ a.btn:hover {
     transform: scale(1); /* Scale up link on hover */
 }
 
+.resume img{
+    width: 100%;
+    max-width: 150px;
+    transition: transform 0.3s;
+}
+
+.resume img:hover{
+    width: 100%;
+    max-width: 150px;
+    transform: scale(1.02); /* Initial scale for hover effect */
+    transition: transform 0.3s;
+}
+
 
 @media screen and (max-width: 1300px) {
    .statement{}
