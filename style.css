@@ -167,7 +167,7 @@ h1 {
   background-color: #f2f2f2;
   overflow: hidden;
   border-radius: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
   width: calc(50% - 10px);
   /* min-height: 20vw; */
   height: calc(33.3333vh - 27px);
@@ -175,7 +175,8 @@ h1 {
 
 .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+  border-radius: 0;
   background-color: #00c0ad;
   color: #ffffff;
 }
